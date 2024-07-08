@@ -1,0 +1,249 @@
+@charset "uft-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+    line-height: 1;
+    background-color: #0f0501;
+}
+
+#wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+.box {
+    width: 100%;
+    height: 63px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#header {
+    width: 1860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 87px;
+    left: 0;
+    z-index: 100;
+}
+#header h1 {
+    width: 189px;
+    height: 53px;
+    object-fit: cover;
+}
+#header ul {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#header .header_btn {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+#header ul .home_btn {
+    background: url('../img/home_btn.png') center center no-repeat;
+}
+#header ul .home_btn:hover {
+    background: url('../img/home_btn_hover.png') center center no-repeat;
+}
+#header ul .youtube_btn {
+    background: url('../img/youtube_btn.png') center center no-repeat;
+}
+#header ul .youtube_btn:hover {
+    background: url('../img/youtube_btn_hover.png') center center no-repeat;
+}
+#header ul .instar_btn {
+    background: url('../img/instar_btn.png') center center no-repeat;
+}
+#header ul .instar_btn:hover {
+    background: url('../img/instar_btn_hover.png') center center no-repeat;
+}
+
+
+
+
+#burning_page {
+    width: 100%;
+    height: 1642px;
+    background: url('../img/cont_bg.png') center center no-repeat;
+    position: relative;
+    animation: cont_bg 0.8s linear infinite;
+}
+@keyframes cont_bg {
+    0% {filter}
+}
+#burning_page .no_animation {
+    padding-top: 65px;
+}
+#burning_page .no_animation .ttl_01 {
+    width: 634px;
+    height: 65px;
+    background: url('../img/ttl_01.png') center center no-repeat;
+    margin: 0 auto;
+}
+#burning_page .no_animation .character {
+    width: 699px;
+    height: 638px;
+    background: url('../img/char.png') center center no-repeat;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -58px;
+    z-index: 1;
+}
+#burning_page .ttl {
+    position: relative;
+    width: 100%;
+}
+#burning_page .ttl .ttl_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#burning_page .ttl .title_01 {
+    width: 376px;
+    height: 376px;
+    background: url('../img/버.png') center center no-repeat;
+    top: 15px;
+    margin-left: -356px;
+}
+#burning_page .ttl .title_02 {
+    width: 387px;
+    height: 376px;
+    background: url('../img/닝.png') center center no-repeat;
+    top: 15px;
+    margin-left: 302px;
+}
+#burning_page .ttl .event_ttl {
+    width: 1323px;
+    height: 103px;
+    background: url('../img/event_ttl.png') center center no-repeat;
+    top: 414px;
+    margin-left: -20px;
+}
+#burning_page .ttl .ttl_02 {
+    width: 742px;
+    height: 90px;
+    background: url('../img/ttl_02.png') center center no-repeat;
+    top: 533px;
+    margin-left: -20px;
+}
+#burning_page .color_card {
+    width: 100%;
+    position: relative;
+}
+#burning_page .color_card .card_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#burning_page .color_card .card_img .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+#burning_page .color_card .red_card {
+    width: 604px;
+    height: 722px;
+    background: url('../img/red_card.png') center center no-repeat;
+    top: 627px;
+    margin-left: -383px;
+    transition-duration: 0.3s;
+    position: relative;
+}
+#burning_page .color_card .red_card:hover {
+    margin-left: -725px;
+    transform: rotate(10deg);
+    transform-origin: right;
+    z-index: 1;
+}
+#burning_page .color_card .red_card .red_btn {
+    width: 411px;
+    height: 127px;
+    background: url('../img/red_btn.png') center center no-repeat;
+    bottom: 42px;
+    margin-left: 45px;
+}
+#burning_page .color_card .red_card .red_btn:hover {
+    background: url('../img/red_btn_hover.png') center center no-repeat;
+}
+#burning_page .color_card .purple_card {
+    width: 604px;
+    height: 722px;
+    background: url('../img/purple_card.png') center center no-repeat;
+    top: 627px;
+    margin-left: 340px;
+    transition-duration: 0.3s;
+}
+#burning_page .color_card .purple_card:hover {
+    margin-left: 119px;
+    transform: rotate(-10deg);
+    transform-origin: left;
+    z-index: 1;
+}
+#burning_page .color_card .purple_card .purple_btn {
+    width: 410px;
+    height: 127px;
+    background: url('../img/purple_btn.png') center center no-repeat;
+    bottom: 42px;
+    margin-left: -45px;
+}
+#burning_page .color_card .purple_card .purple_btn:hover {
+    background: url('../img/purple_btn_hover.png') center center no-repeat;
+}
+#burning_page .color_card .blue_card {
+    width: 604px;
+    height: 722px;
+    background: url('../img/blue_card.png') center center no-repeat;
+    top: 627px;
+    transition-duration: 0.3s;
+    margin-left: -20px;
+}
+#burning_page .color_card .blue_card:hover {
+    transform: translateY(-34px);
+    margin-left: -323px;
+}
+#burning_page .color_card .blue_card .blue_btn01 {
+    width: 215px;
+    height: 65px;
+    background: url('../img/blue_btn_01.png') center center no-repeat;
+    bottom: 72px;
+    margin-left: -111px;
+}
+#burning_page .color_card .blue_card .blue_btn01:hover {
+    background: url('../img/blue_btn_hover_01.png') center center no-repeat;
+}
+#burning_page .color_card .blue_card .blue_btn02 {
+    width: 215px;
+    height: 65px;
+    background: url('../img/blue_btn_02.png') center center no-repeat;
+    bottom: 72px;
+    margin-left: 111px;
+}
+#burning_page .color_card .blue_card .blue_btn02:hover {
+    background: url('../img/blue_btn_hover_02.png') center center no-repeat;
+}
