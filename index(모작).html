@@ -5,23 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메이플 버닝이벤트 모작</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            // menu_open을 클릭 했을 때
+            // active가 붙어서 이미지 변경 / gnb_opne가 display:block이 되도록
+
+            let meunOpen = $('.menu_open');
+            let gnbOpen = $('.gnb_opne');
+
+            meunOpen.click(function() {
+                // active 클래스가 이미 있으면 제거하고, gnbOpen의 display를 none으로 설정
+                if (meunOpen.hasClass('active')) {
+                    meunOpen.removeClass('active');
+                    gnbOpen.css('display', 'none');
+                } else {
+                    // active 클래스가 없으면 추가하고, gnbOpen의 display를 block으로 설정
+                    meunOpen.addClass('active');
+                    gnbOpen.css('display', 'block');
+                }
+                console.log('I am Groot');
+            });/* meunOpen 클릭 했을 시 이벤트 종료 */
+        });/* 스크립트 종료 */
+    </script>
 </head>
 <body>
     <div id="wrap">
-        <div class="box"></div>
         <header id="header">
-            <h1>
-                <a href="#">
-                    <img src="img/cont_logo.png" alt="">
-                </a>
-            </h1>
+            <div class="header_logo_bar">
+                <h1>
+                    <a href="#">
+                        <img src="img/cont_logo.png" alt="">
+                    </a>
+                </h1>
+    
+                <ul>
+                    <li class="home_btn header_btn"></li>
+                    <li class="youtube_btn header_btn"></li>
+                    <li class="instar_btn header_btn"></li>
+                </ul>
+            </div><!-- header_logo_bar -->
 
-            <ul>
-                <li class="home_btn header_btn"></li>
-                <li class="youtube_btn header_btn"></li>
-                <li class="instar_btn header_btn"></li>
-            </ul>
-        </header><!-- header -->
+            <div class="nav_bav_list">
+                <div class="menu_open"></div>
+    
+                <nav class="gnb_opne">
+                    <div class="gnb_title">
+                        <img src="img/cont_logo.png" alt="">
+                    </div><!-- gnb_title -->
+    
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">
+                                <img src="img/nav_bar01.jpg" alt="">
+        
+                                <div>
+                                    <p>2024<br/>
+                                    여름 이벤트</p>
+                                </div>
+                            </a>
+                        </li><!-- depth01 -->
+                        <li class="depth01">
+                            <a href="#">
+                                <img src="img/nav_bar02.jpg" alt="">
+        
+                                <div>
+                                    <p>리마스터<br/>
+                                    아란 & 은원</p>
+                                </div>
+                            </a>
+                        </li><!-- depth01 -->
+                        <li class="depth01 active">
+                            <a href="#">
+                                <img src="img/nav_bar03.png" alt="">
+        
+                                <div>
+                                    <p>버닝 이벤트</p>
+                                </div>
+                            </a>
+                        </li><!-- depth01 -->
+                        <li class="depth01">
+                            <a href="#">
+                                <img src="img/nav_bar04.jpg" alt="">
+        
+                                <div>
+                                    <p>기억속<br/>
+                                    한 페이지</p>
+                                </div>
+                            </a>
+                        </li><!-- depth01 -->
+                    </ul><!-- gnb -->
+                </nav>
+            </div><!-- nav_bar -->  
+        </header><!-- header -->  
 
         <div id="burning_page">
             <div class="no_animation">
