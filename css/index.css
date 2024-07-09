@@ -19,6 +19,7 @@ body {
 
 #wrap {
     max-width: 1920px;
+    height: 1642px;
     margin: 0 auto;
     position: relative;
 }
@@ -103,62 +104,64 @@ body {
     top: 0;
     right: 0;
 }
-.gnb_opne {
+.gnb_open {
     width: 221px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     background-color: #222222;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: -221px;
 }
-.gnb_opne .gnb_title {
+.gnb_open .gnb_title {
     height: 44px;
     padding-top: 58px;
     margin-left: 35px;
     margin-bottom: 65px;
 }
-.gnb_opne .gnb_title img {
+.gnb_open .gnb_title img {
     width: 146px;
     height: 41px;
     object-fit: cover;
 }
-.gnb_opne .gnb {
+.gnb_open .gnb {
     width: 220px !important;
 }
-.gnb_opne .depth01 {
+.gnb_open .depth01 {
     width: 100%;
     border-top: 1px dashed #2f2e32;
     padding-top: 25px;
     padding-bottom: 25px;
     filter: grayscale(100%);
 }
-.gnb_opne .depth01 a {
+.gnb_open .depth01 a {
     display: flex;
     justify-content: flex-start;
     margin-left: 24px;
 }
-.gnb_opne .depth01 a img {
+.gnb_open .depth01 a img {
     width: 52px;
     height: 52px;
     object-fit: cover;
     border: 2px solid #4d4d4d;
     margin-right: 13px;
 }
-.gnb_opne .depth01:nth-child(3) a img {
+.gnb_open .depth01:nth-child(3) a img {
     border: none;
 }
-.gnb_opne .depth01 a div {
+.gnb_open .depth01 a div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
     font-size: 14px;
 }
-.gnb_opne .depth01:hover {
+.gnb_open .depth01:hover {
     filter: none;
 }
-.gnb_opne .depth01.active {
+.gnb_open .depth01.active {
     filter: none;
 }
 
@@ -170,6 +173,7 @@ body {
     position: relative;
     animation: cont_bg 0.8s linear infinite;
     top: -72px;
+    opacity: 1;
 }
 #burning_page .no_animation {
     padding-top: 65px;
@@ -259,7 +263,7 @@ body {
 }
 #burning_page .color_card .red_card:hover {
     margin-left: -725px;
-    transform: rotate(10deg);
+    transform: rotate(10deg) !important;
     transform-origin: right;
     z-index: 1;
 }
@@ -282,8 +286,8 @@ body {
     transition-duration: 0.3s;
 }
 #burning_page .color_card .purple_card:hover {
-    margin-left: 119px;
-    transform: rotate(-10deg);
+    margin-left: 96px;
+    transform: rotate(-10deg) !important;
     transform-origin: left;
     z-index: 1;
 }
@@ -306,7 +310,7 @@ body {
     margin-left: -20px;
 }
 #burning_page .color_card .blue_card:hover {
-    transform: translateY(-34px);
+    transform: translateY(-34px) !important;
     margin-left: -323px;
 }
 #burning_page .color_card .blue_card .blue_btn01 {

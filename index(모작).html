@@ -6,26 +6,87 @@
     <title>메이플 버닝이벤트 모작</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script>
         $(function(){
             // menu_open을 클릭 했을 때
             // active가 붙어서 이미지 변경 / gnb_opne가 display:block이 되도록
-
             let meunOpen = $('.menu_open');
-            let gnbOpen = $('.gnb_opne');
+            let gnbOpen = $('.gnb_open');
 
             meunOpen.click(function() {
-                // active 클래스가 이미 있으면 제거하고, gnbOpen의 display를 none으로 설정
                 if (meunOpen.hasClass('active')) {
                     meunOpen.removeClass('active');
-                    gnbOpen.css('display', 'none');
+                    meunOpen.animate({ right: '221px' }, 800); 
+                    gnbOpen.animate({ left: '-221px' }, 500, function() {
+                        gnbOpen.css('display', 'none');
+                    });
                 } else {
-                    // active 클래스가 없으면 추가하고, gnbOpen의 display를 block으로 설정
                     meunOpen.addClass('active');
-                    gnbOpen.css('display', 'block');
+                    meunOpen.animate({ right: '0' }, 500);
+                    gnbOpen.css('display',   'block').animate({ left: '0' }, 500);
                 }
-                console.log('I am Groot');
+                console.log('I am Groot!');
             });/* meunOpen 클릭 했을 시 이벤트 종료 */
+
+            // depth01를 클릭 했을 시 alert 창이 뜨도록
+            // alert창 문구 -> 0번과 1번 -> 이벤트 기간이 지났습니다.
+            //                 2번 -> 아무것도 안뜨게
+            //                 3번 -> 이벤트 기간이 아닙니다.
+            $('.depth01').each(function(index) {
+                $(this).click(function() {
+                    if (index === 0 || index === 1) {
+                        alert('이벤트 기간이 지났습니다.');
+                    } else if (index == 3) {
+                        alert('이벤트 기간이 아닙니다.');
+                    } else {
+
+                    }
+                });
+            });
+
+            // 화면이 접속 됨과 동시에 애니메이션 진행
+            // gsap.from을 사용해서 진행하면 좋을듯
+            gsap.from("#burning_page", {
+                opacity: 0
+            });
+            gsap.from(".title_01", {
+                opacity: 0,
+                y: -1000,
+                scale: 3,
+                ease: "elastic.out(0.4)",
+                delay: .8
+            });
+
+            gsap.from(".title_02", {
+                opacity: 0,
+                y: 1000,
+                scale: 3,
+                ease: "elastic.out(0.4)",
+                delay: .8
+            });
+
+            gsap.from(".event_ttl", {
+                opacity: 0,
+                y: 1000,
+                scale: 3,
+                ease: "elastic.out(0.4)",
+                delay: 0.8
+            });
+
+            gsap.from(".ttl_02", {
+                y: -100,
+                opacity: 0,
+                delay: 1
+            });// 버닝이벤트 애니메이션 종료
+
+            gsap.from(".color_card>div", {
+                opacity: 0,
+                y: 300,
+                rotateY: -360,
+                duration: 1,
+                ease: "elastic.out(0.2)"
+            })
         });/* 스크립트 종료 */
     </script>
 </head>
@@ -49,7 +110,7 @@
             <div class="nav_bav_list">
                 <div class="menu_open"></div>
     
-                <nav class="gnb_opne">
+                <nav class="gnb_open">
                     <div class="gnb_title">
                         <img src="img/cont_logo.png" alt="">
                     </div><!-- gnb_title -->
