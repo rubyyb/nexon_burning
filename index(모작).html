@@ -161,6 +161,7 @@
         </header><!-- header -->  
 
         <div id="burning_page">
+            <div class="background_img"></div>
             <div class="no_animation">
                 <div class="ttl_01"></div>
                 <div class="character"></div>
@@ -185,6 +186,33 @@
                     <div class="btn blue_btn02"></div>
                 </div><!-- blue_card -->
             </div><!-- color_card -->
+
+            <div class="bgo__filter">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="squiggly-0">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"></feTurbulence>
+                            <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6"></feDisplacementMap>
+                        </filter>
+                        <filter id="squiggly-1">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10"></feDisplacementMap>
+                        </filter>
+                        <filter id="squiggly-2">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10"></feDisplacementMap>
+                        </filter>
+                        <filter id="squiggly-3">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10"></feDisplacementMap>
+                        </filter>
+                        <filter id="squiggly-4">
+                            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10"></feDisplacementMap>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
         </div><!-- burning_page -->
     </div><!-- wrap -->
 </body>
