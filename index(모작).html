@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         $(function(){
             // menu_open을 클릭 했을 때
@@ -54,8 +55,8 @@
                 opacity: 0,
                 y: -1000,
                 scale: 3,
-                ease: "elastic.out(0.4)",
-                delay: .8
+                ease: "elastic.out(0.4)", // 애니메이션 끝날 시 반동 효과
+                delay: 0.8
             });
 
             gsap.from(".title_02", {
@@ -63,7 +64,7 @@
                 y: 1000,
                 scale: 3,
                 ease: "elastic.out(0.4)",
-                delay: .8
+                delay: 0.8
             });
 
             gsap.from(".event_ttl", {
@@ -75,8 +76,8 @@
             });
 
             gsap.from(".ttl_02", {
-                y: -100,
                 opacity: 0,
+                y: -100,
                 delay: 1
             });// 버닝이벤트 애니메이션 종료
 
@@ -87,6 +88,129 @@
                 duration: 1,
                 ease: "elastic.out(0.2)"
             })
+
+            gsap.to(".stone01", {
+                y: -30,
+                x: -10,
+                yoyo: true,
+                repeat: -1,
+                ease: "none",
+                duration: 1
+            }),
+            gsap.to(".stone02", {
+                y: 30,
+                x: 10,
+                yoyo: true,
+                repeat: -1,
+                ease: "none",
+                duration: 1
+            }),
+            gsap.to(".stone03", {
+                y: 30,
+                x: 10,
+                yoyo: true,
+                repeat: -1,
+                ease: "none",
+                duration: 1
+            }),
+            gsap.to(".stone04", {
+                y: -30,
+                x: 10,
+                yoyo: true,
+                repeat: -1,
+                ease: "none",
+                duration: 1
+            })
+
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 50, // 파티클 개수 value가 200이면 200개
+                        "density": { // 밀도 설정
+                            "enable": true, // 밀도 설정 활성화
+                            "value_area": 8000
+                            // 배치되는 영역 크기 -> 단위 : px2(픽셀제곱) 
+                            // 이 값이 클수록 동일한 파티클 수가 더 넓게 분포 됨
+                        }
+                    },
+                    "color": {
+                        "value": "#fdd007" // 파티클 색상
+                    },
+                    "shape": { // 모양
+                        "type": "circle", // 원으로 설정 다른 모양도 가능
+                        "stroke": {// 테두리 설 
+                            "width": 0, // 테두리 두께
+                        },
+                        "polygon": {
+                            "nb_sides": 3 //다각형의 변의 수 
+                            // 3이면 삼각형 , 4면 사각형, 5면 오각형
+                        },
+                        "image": { // 파티클이 이미지일 경우 설정
+                            "src": "img/fire.png", // 경로 설정
+                            "width": 100, // 이미지 크기
+                            "height": 100
+                        }
+                    },
+                    "opacity": { // 투명도
+                        "value": 0.8, // 불투명도 설정 1에 가까울 수록 불투명
+                        // 0이면 투명
+                        "random": true, // 불투명도를 랜덤하게 설정
+                        "anim": { // 애니메이션
+                            "enable": false, // 애니메이션을 비활성화 함
+                        }
+                    },
+                    "size": { // 사이즈
+                        "value": 10, // 파티클 크기
+                        "random": true, // 크기를 랜덤하게 설정
+                        "anim": { // 애니메이션
+                            "enable": true, // 애니메이션 활성화
+                            "speed": 5, // 애니메이션 속도
+                            // 숫자가 커질 수록 변화 속도가 빨라짐
+                            "size_min": 0.01, // 최소 크기
+                            "sync": false // 동기화 여부
+                            // true로 하면 모든 파티클의 크기는 동일하게 동기화 됨
+                        }
+                    },
+                    "line_linked": { // 파티클 간 선 연결
+                        "enable": false, // 파티클 간 선 연결 비활성화
+                    },
+                    "move": {
+                        "enable": true, // 파티클 이동을 활성화
+                        "speed": 15, // 파티클이 이동하는  속도
+                        "direction": "top",  // 이동 방향
+                        "random": true, // 랜덤이동 활성화
+                        "straight": false, // 직선이동 비활성화
+                        "out_mode": "out", // 경계를 넘어갈 경우 동작 설정
+                        "bounce": false, // 경계에서 튀는 동작 비활성화
+                        "attract": { // 파티클 끌림 효과 설정
+                            "enable": false, // 끌림효과 비활성화
+                        }
+                    }
+                },
+                "interactivity": { 
+                    "detect_on": "canvas", // 상호작용을 감지할 요소
+                    "events": { 
+                        "onhover": { // 마우스 오버 시 이벤트 설정
+                            "enable": false, //비활성화
+                        },
+                        "onclick": {
+                            "enable": false,
+                        },
+                        "resize": true  
+                    },
+                    "modes": { // 모드
+                        "grab": { // 잡기모드 설정
+                            "distance": 400, // 거리 설정
+                            // 값이 커질 때 마우스 포인터가 파티클과 더 멀리 떨어져 잇어도 상호작용 발생
+                            // 값이 작아질 때 마우스 포인터가 파티클에 아주 가까이 접근해야지만 발생
+                            "line_linked": { // 연결되는 선 설정
+                                "opacity": 0.5 // 선의 불투명도
+                            }
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
         });/* 스크립트 종료 */
     </script>
 </head>
@@ -172,6 +296,11 @@
                 <div class="title_02 ttl_img"></div>
                 <div class="event_ttl ttl_img"></div>
                 <div class="ttl_02 ttl_img"></div>
+
+                <div class="stone stone01"></div>
+                <div class="stone stone02"></div>
+                <div class="stone stone03"></div>
+                <div class="stone stone04"></div>
             </div><!-- ttl -->
 
             <div class="color_card">
@@ -214,6 +343,8 @@
                 </svg>
             </div>
         </div><!-- burning_page -->
+
+        <div id="particles-js"></div>
     </div><!-- wrap -->
 </body>
 </html>

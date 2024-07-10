@@ -1,4 +1,11 @@
 @charset "uft-8";
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +22,7 @@ body {
     color: #333;
     line-height: 1;
     background-color: #0f0501;
+    font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 #wrap {
@@ -168,6 +176,89 @@ body {
     filter: none;
 }
 
+/* .nav_bav_list {
+    width: 265px;
+    height: 100vh;
+    position: absolute;
+    top: -31px;
+    left: -32px;
+}
+.nav_bav_list .menu_open {
+    width: 44px;
+    height: 44px;
+    background: url('../img/menu_open.png') center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: -3px;
+}
+.nav_bav_list .menu_open.active {
+    background: url('../img/menu_close.png') center center no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+.nav_bav_list .gnb_open {
+    width: 221px;
+    height: 100%;
+    background-color: #222222;
+    left: 0;
+    display: none;
+}
+.nav_bav_list .gnb_open .gnb_title {
+    padding-top: 51px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+}
+.nav_bav_list .gnb_open .gnb_title img {
+    width: 146px;
+    height: 41px;
+    object-fit: cover;
+}
+.nav_bav_list .gnb_open .gnb {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.nav_bav_list .gnb_open .gnb li {
+    width: 100%;
+    padding: 25px 0;
+    border-top: 1px dashed #2f2e32;
+    padding-left: 24px;
+    filter: grayscale(100%);
+}
+.gnb_open .depth01:nth-child(4){
+    border-bottom: 1px dashed #2f2e32;
+}
+.nav_bav_list .gnb_open .gnb li:hover {
+    filter: none;
+}
+.nav_bav_list .gnb_open .gnb li.active {
+    filter: none;
+}
+.nav_bav_list .gnb_open .gnb li a {
+    display: flex;
+}
+.nav_bav_list .gnb_open .gnb li a img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border: 2px solid #4d4d4d;
+    margin-right: 12px;
+}
+.gnb_open .depth01:nth-child(3) a img {
+    border: none !important;
+}
+.nav_bav_list .gnb_open .gnb li a > div {
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+} */
+
 #burning_page {
     width: 100%;
     height: 1642px;
@@ -263,9 +354,45 @@ body {
     top: 533px;
     margin-left: -20px;
 }
+#burning_page .ttl .stone {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#burning_page .ttl .stone01 {
+    width: 122px;
+    height: 82px;
+    background: url('../img/stone_01.png') center center no-repeat;
+    top: -45px;
+    margin-left: -612px;
+}
+#burning_page .ttl .stone02 {
+    width: 69px;
+    height: 58px;
+    background: url('../img/stone_02.png') center center no-repeat;
+    top: 47px;
+    margin-left: 445px;
+}
+#burning_page .ttl .stone03 {
+    width: 86px;
+    height: 123px;
+    background: url('../img/stone_03.png') center center no-repeat;
+    top: 340px;
+    margin-left: -747px;
+}
+#burning_page .ttl .stone04 {
+    width: 99px;
+    height: 88px;
+    background: url('../img/stone_04.png') center center no-repeat;
+    top: 344px;
+    margin-left: 207px;
+}
+
 #burning_page .color_card {
     width: 100%;
     position: relative;
+    z-index: 1;
 }
 #burning_page .color_card .card_img {
     position: absolute;
@@ -360,4 +487,12 @@ body {
 }
 #burning_page .color_card .blue_card .blue_btn02:hover {
     background: url('../img/blue_btn_hover_02.png') center center no-repeat;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
