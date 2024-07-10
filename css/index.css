@@ -19,7 +19,7 @@ body {
 
 #wrap {
     max-width: 1920px;
-    height: 1642px;
+    height: 1635px;
     margin: 0 auto;
     position: relative;
 }
@@ -85,13 +85,13 @@ body {
 }
 
 .nav_bav_list {
-    /* display: none; */
     width: 265px;
     height: 100vh;
     position: absolute;
     top: -31px;
     left: -36px;
     cursor: pointer;
+    transition: transform 0.4s ease-in-out;
 }
 .nav_bav_list .menu_open {
     width: 44px;
@@ -181,7 +181,7 @@ body {
     background: url('../img/cont_bg.png') center center no-repeat;
     animation: cont_bg 0.8s linear infinite;
     position: absolute;
-    top: 0;
+    top: -5px;
 }
 @keyframes cont_bg {
     0% {
